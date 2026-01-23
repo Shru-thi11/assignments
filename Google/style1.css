@@ -1,0 +1,87 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-color: white;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#logo-container {
+    margin-bottom: 10px;
+    width: 350px;
+}
+
+.search-section {
+    background-color: white ;
+    padding: 15px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.search-section  {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.search-box {
+    width: 280px;
+    margin-bottom: 10px;
+}
+
+.buttons input {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 1px 4px;
+    background-color: white;
+    border: 2px solid;
+    border-color: white grey grey white;
+   text-align: center;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: center;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.info-column {
+    display: 1;
+    padding: 12px;
+    font-size: 13px;
+    height: 80px;
+}
+
+.column-title {
+    display: flex;
+    margin-bottom: 2px;
+}
+
+.col-left { background-color: #7EE5DA; }
+.col-middle { background-color: #82eadc; }
+.col-right { background-color: #a1efe3; }
+ 
+.info-column a {
+    color: #7c7cf3;
+    display: block;
+    text-decoration: underline;
+}
+
+.email-box {
+    width: 140px;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.subscribe-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 12px;
+}
