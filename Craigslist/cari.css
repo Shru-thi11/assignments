@@ -1,0 +1,127 @@
+/* General Setup */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    background-color: white;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header Area */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    color: blue;
+    text-decoration: underline;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.location-box {
+    background-color: #eee;
+    padding: 5px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+
+/* Layout Columns */
+.main-layout {
+    display: flex;
+    gap: 15px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ddd;
+    padding: 10px;
+}
+
+.column {
+    flex: 1;
+}
+
+/* Typography & Links */
+a {
+    color: blue;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+a:hover {
+    color: red;
+}
+
+.header-gray {
+    background-color: #eee;
+    margin: 0;
+    padding: 2px 5px;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.bold-blue a {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Specific Sidebar Styles */
+.nav-links a {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.search-container {
+    border: 1px solid #999;
+    padding: 10px 5px;
+    margin: 20px 0;
+}
+
+.search-container h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+}
+
+.search-container input {
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+.email { font-size: 12px; }
+.update-text { font-size: 11px; color: #333; }
+
+/* Lists */
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.link-list li {
+    padding: 2px 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.misc-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
