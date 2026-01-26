@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.top-nav {
+    margin-bottom: 10px;
+}
+
+.top-nav a {
+    color: blue;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-right: 10px;
+}
+
+.availability {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+
+.main-layout {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.left-col {
+    width: 250px;
+}
+
+.left-col h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.link a {
+    color: blue;
+    font-size: 13px;
+}
+
+.search-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ccc;
+}
+
+
+.center-col {
+    flex: 1;
+    padding: 0 30px;
+}
+
+.main-img img {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.listing-info {
+    display: flex;
+    margin-top: 15px;
+}
+
+.host-img {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+    margin-right: 15px;
+}
+
+.listing-info .text {
+    font-size: 14px;
+}
+
+.listing-info a {
+    color: blue;
+    font-weight: bold;
+}
+
+
+.right-col {
+    width: 200px;
+}
+
+.pink-label {
+    color: #FF3366;
+    font-size: 13px;
+    margin: 10px 0 2px 0;
+}
+
+.item p {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+}
+
+.item img {
+    width: 100%;
+    border: 1px solid #eee;
+}
+
+
+.footer-area {
+    margin-top: 40px;
+}
+
+.press-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #666;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.footer-links li {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: blue;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 20px;
+    color: #888;
+}
