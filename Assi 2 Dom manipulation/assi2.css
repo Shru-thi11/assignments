@@ -1,0 +1,47 @@
+body {
+    background: #f4f4f4;
+    transition: all 0.4s ease;
+}
+
+/* The dark mode class */
+.bg-dark {
+    background: #333 !important;
+    color: #fff;
+}
+
+.container {
+    margin: 0 auto;
+    width: 400px;
+    overflow: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#my-form {
+    padding: 20px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    background: #444;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-left:90px;
+}
+
+.items {
+    list-style: none;
+    padding: 0;
+}
+
+.item {
+    background: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    color: #333;
+}
