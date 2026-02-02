@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Manual Calculator</title>
+    <link rel="stylesheet" href="assi3.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="screen" id="screen">0</div>
+        
+        <div class="buttons">
+            <button class="btn col-2 red" onclick="clearAll()">C</button>
+            <button class="btn" onclick="setOperator('/')">/</button>
+            <button class="btn" onclick="setOperator('*')">x</button>
+            
+            <button class="btn" onclick="pressNum(7)">7</button>
+            <button class="btn" onclick="pressNum(8)">8</button>
+            <button class="btn" onclick="pressNum(9)">9</button>
+            <button class="btn" onclick="setOperator('-')">-</button>
+            
+            <button class="btn" onclick="pressNum(4)">4</button>
+            <button class="btn" onclick="pressNum(5)">5</button>
+            <button class="btn" onclick="pressNum(6)">6</button>
+            <button class="btn" onclick="setOperator('+')">+</button>
+            
+            <button class="btn" onclick="pressNum(1)">1</button>
+            <button class="btn" onclick="pressNum(2)">2</button>
+            <button class="btn" onclick="pressNum(3)">3</button>
+            <button class="btn green" onclick="calculate()">=</button>
+            
+            <button class="btn col-3" onclick="pressNum(0)">0</button>
+        </div>
+    </div>
+
+    <script src="assi3.js"></script>
+</body>
+</html>
