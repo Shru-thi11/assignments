@@ -1,0 +1,9 @@
+<div class="feed-container">
+    <% posts.forEach(post => { %>
+        <div class="post-card">
+            <strong><%= post.name %></strong> 
+            <small><%= post.createdAt %></small>
+            <p><%= post.message %></p>
+        </div>
+    <% }) %>
+</div>
