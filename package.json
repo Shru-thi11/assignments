@@ -12,7 +12,10 @@
   "dependencies": {
     "ejs": "^4.0.1",
     "express": "^5.2.1",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "method-override": "^3.0.0",
+    "mongodb": "^7.1.0",
+    "mongoose": "^9.2.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"

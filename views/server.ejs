@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Create a Post</h1>
+    <% if (error) { %> <p class="error"><%= error %></p> <% } %>
+    
+    <form action="/posts" method="POST">
+        <textarea name="content" placeholder="Minimum 25 characters..."></textarea>
+        <button type="submit">Post</button>
+    </form>
+
+    <hr>
+
+    <% posts.forEach(post => { %>
+        <div class="post">
+            <p><%= post.content %></p>
+            <p class="date">Posted on: <%= post.createdAt.toDateString() %></p>
+            
+            <form action="/posts/<%= post._id %>?_method=PUT" method="POST" style="display:inline;">
+                <input type="text" name="content" value="<%= post.content %>">
+                <button type="submit">Update</button>
+            </form>
+
+            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    <% }) %>
+</body>
+</html>
