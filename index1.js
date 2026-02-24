@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
 
-mongoose.connect('mongodb+srv://shruthi1193_db_user:Vijravi19@@clustertest.dnilw4y.mongodb.net/?appName=Clustertest')
+mongoose.connect('mongodb+srv://shruthi1193_db_user:Tl0MEJHdAH@cluster0.0o0njhk.mongodb.net/?appName=Cluster0')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error(err));
 

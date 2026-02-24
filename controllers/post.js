@@ -2,7 +2,7 @@ const Post = require('../model/posting');
 
 exports.getAllPosts = async (req, res) => {
     const posts = await Post.find().sort({ createdAt: -1 });
-    res.render('index', { posts, error: null });
+    res.render('homepage', { posts, error: null });
 };
 
 exports.createPost = async (req, res) => {
@@ -11,7 +11,7 @@ exports.createPost = async (req, res) => {
         res.redirect('/');
     } catch (err) {
         const posts = await Post.find().sort({ createdAt: -1 });
-        res.render('index', { posts, error: err.message });
+        res.render('homepage', { posts, error: err.message });
     }
 };
 
