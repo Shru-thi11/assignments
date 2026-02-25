@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Posts</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Post App</title>
 </head>
 <body>
-    <h1>Create a Post</h1>
+    <h1>Feed</h1>
     <% if (error) { %> <p class="error"><%= error %></p> <% } %>
-    
-    <form action="/posts" method="POST">
-        <textarea name="content" placeholder="Minimum 25 characters..."></textarea>
-        <button type="submit">Post</button>
-    </form>
 
-    <hr>
+    <div class="card">
+        <form action="/posts" method="POST">
+            <textarea name="content" placeholder="Min 25 characters..."></textarea>
+            <button type="submit" class="btn">Submit Post</button>
+        </form>
+    </div>
 
     <% posts.forEach(post => { %>
-        <div class="post">
+        <div class="card">
             <p><%= post.content %></p>
-            <p class="date">Posted on: <%= post.createdAt.toDateString() %></p>
-            
+            <p class="date">Posted: <%= post.createdAt.toDateString() %></p>
+
             <form action="/posts/<%= post._id %>?_method=PUT" method="POST" style="display:inline;">
                 <input type="text" name="content" value="<%= post.content %>">
-                <button type="submit">Update</button>
+                <button type="submit" class="btn">Update</button>
+            </form>
+            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-del">Delete</button>
             </form>
 
-            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" style="display:inline;">
-                <button type="submit">Delete</button>
+            <hr>
+            <% if (post.comments && post.comments.length > 0) { %>
+                <% post.comments.forEach(c => { %>
+                    <div class="comment"><%= c.content %></div>
+                <% }) %>
+            <% } %>
+            <form action="/posts/<%= post._id %>/comment" method="POST">
+                <input type="text" name="commentContent" placeholder="Add comment..." required>
+                <button type="submit" class="btn">Reply</button>
             </form>
         </div>
     <% }) %>
