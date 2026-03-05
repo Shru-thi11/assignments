@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("add") %>
+</head>
+<body class="bg-light">
+<div class="container mt-3">
+
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <% if (user) { %>
+            <h4>Welcome, <%= user.firstName %> <%= user.lastName %></h4>
+            <a href="/logout" class="btn btn-danger">Logout</a>
+        <% } else { %>
+            <h4>Welcome, Guest</h4>
+            <a href="/login" class="btn btn-primary">Login</a>
+        <% } %>
+    </div>
+
+    <!-- New Post -->
+    <% if (user) { %>
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <form action="/add-post" method="POST">
+                <textarea name="body" class="form-control mb-2" rows="3" placeholder="Write your post..." required minlength="25"></textarea>
+                <button type="submit" class="btn btn-primary w-100">Post</button>
+            </form>
+        </div>
+    </div>
+    <% } %>
+
+    <!-- Posts -->
+    <% posts.forEach(post => { %>
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <% if (post.userId) { %>
+                    <div class="fw-bold mb-1"><%= post.userId.firstName %> <%= post.userId.lastName %></div>
+                <% } else { %>
+                    <div class="fw-bold mb-1">Unknown User</div>
+                <% } %>
+                <div class="text-muted mb-2"><%= post.createdAt.toDateString() %></div>
+                <p class="mb-2 text-break"><%= post.body %></p>
+
+                <!-- Comments -->
+                <% comments.forEach(comment => { %>
+                    <% if(comment.postId.toString() === post._id.toString()) { %>
+                        <div class="card mt-2 ms-3 p-2">
+                            <% if (comment.userId) { %>
+                                <div class="fw-bold"><%= comment.userId.firstName %> <%= comment.userId.lastName %></div>
+                            <% } else { %>
+                                <div class="fw-bold">Unknown User</div>
+                            <% } %>
+                            <div class="text-muted small"><%= comment.createdAt.toDateString() %></div>
+                            <p class="mb-0 text-break"><%= comment.body %></p>
+                        </div>
+                    <% } %>
+                <% }) %>
+
+                <!-- Add Comment -->
+                <% if (user) { %>
+                <div class="mt-2">
+                    <form action="/posts/<%= post._id %>/comment" method="POST">
+                        <textarea name="comment" class="form-control mb-2" rows="2" placeholder="Write a comment..." required minlength="25"></textarea>
+                        <button type="submit" class="btn btn-success btn-sm">Comment</button>
+                    </form>
+                </div>
+                <% } %>
+            </div>
+        </div>
+    <% }) %>
+
+</div>
+</body>
+</html>

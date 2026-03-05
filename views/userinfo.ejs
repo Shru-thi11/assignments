@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("add") %>
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm p-4">
+                <h2 class="mb-3">Register</h2>
+                <form method="POST" action="/register">
+                    <input type="text" name="firstName" placeholder="First Name" class="form-control mb-2" required>
+                    <input type="text" name="lastName" placeholder="Last Name" class="form-control mb-2" required>
+                    <input type="email" name="email" placeholder="Email" class="form-control mb-2" required>
+                    <input type="password" name="password" placeholder="Password" class="form-control mb-2" required>
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control mb-2" required>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+                <% if (result && result !== "") { %>
+                    <div class="mt-2 text-danger"><%= result %></div>
+                <% } %>
+                <hr>
+                <p>Already have an account? <a href="/login">Login</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
