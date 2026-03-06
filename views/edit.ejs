@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Feed</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <h1>Edit Page</h1>
+    <form action="/feed/update/<%= feed._id %>" method="POST">
+        <p>Edit a Post</p>
+        <input type="text" name="name" value="<%= feed.name %>" maxlength="15" required>
+        <textarea name="message" maxlength="40" required><%= feed.message %></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

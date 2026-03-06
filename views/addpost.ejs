@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Feed</title>
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+    <h1>Welcome To Facebook</h1>
+    <form action="/feed" method="POST">
+        <input type="text" name="name" placeholder="Name" maxlength="15" required>
+        <textarea name="message" placeholder="Message" maxlength="40" required></textarea>
+        <button type="submit">Add a Post</button>
+    </form>
+</form>
+
+
+<% feeds.forEach(feed => { %>
+    <div>
+        <h2><%= feed.name %></h2>
+        <p><%= feed.message %></p>
+        <a href="/feed/<%= feed._id %>">See More</a>
+        <small><%= feed.date.toDateString() %></small>
+    </div>
+<% }) %>
