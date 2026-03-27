@@ -1,0 +1,8 @@
+.container { padding: 20px; font-family: sans-serif; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+.form-group { margin-bottom: 15px; }
+label { display: block; font-weight: bold; }
+input, textarea { width: 300px; padding: 5px; margin-top: 5px; }
+.actions a, .actions button { margin-right: 10px; cursor: pointer; }
+button { padding: 5px 15px; }
